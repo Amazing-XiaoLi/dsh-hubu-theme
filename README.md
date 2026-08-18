@@ -64,6 +64,12 @@ DSH湖北大学主题插件/
 
 ## 🚀 安装步骤
 
+> **⚡ 快速安装**：现在是 2026 年——你有代理，让它自己安装。打开你的 Claude Code / Hermes / OpenClaw / Codex / DeepSeek Harness，递给它这句话：
+>
+> `https://github.com/Amazing-XiaoLi/dsh-hubu-theme`
+>
+> 不想折腾代理的话，也可以按下面的手动步骤来。
+
 > 兼容性：适用于 DSH **Web 版**（浏览器端界面），依赖 DSH 的持久化客户端插件机制（`cordis.patch.yml` + `dsh.client` 扫描）。
 
 ### 1. 确认 DSH 主目录
