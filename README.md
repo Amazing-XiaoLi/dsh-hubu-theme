@@ -9,6 +9,14 @@
 >
 > 🏷️ 仓库 Topics：`dsh` · `deepseek-harness` · `plugin` · `theme` · `deepseek` · `hubu` · `floating-ball` · `ui`
 
+## 📸 效果预览
+
+| 浅色模式 | 深色模式 |
+| --- | --- |
+| ![浅色模式](assets/screenshot-light.png) | ![深色模式](assets/screenshot-dark.png) |
+
+> 预览图为界面示意（可打开 `preview/preview.html` 在线查看）。左侧为护眼淡绿浅色主题；右侧为柔和低饱和的松针绿深色主题，校徽/校训自动转为白色剪影。
+
 ---
 
 ## ✨ 特性

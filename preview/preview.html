@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>DSH 湖北大学主题插件 · 效果预览</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, "Microsoft YaHei", sans-serif; background: #0b0f0d; }
+  .label { color: #9fb2a6; text-align: center; padding: 14px 0 10px; font-size: 15px; letter-spacing: 2px; }
+  /* ---- 浅色模式 ---- */
+  .frame-light { position: relative; width: 1400px; height: 660px; background: #D8EBDD; overflow: hidden; }
+  .frame-light .glow { position: absolute; inset: 0; background: radial-gradient(120% 100% at 68% 42%, rgba(11,122,65,0.08), transparent 60%); }
+  .frame-light .sidebar { position: absolute; left: 0; top: 0; bottom: 0; width: 280px; background: #C9E3D1; border-right: 1px solid #B4D4BE; padding: 16px 14px; }
+  .frame-light .logo { font-size: 15px; font-weight: 700; color: #0B7A41; padding-bottom: 14px; border-bottom: 1px solid #B4D4BE; }
+  .frame-light .row { height: 34px; display: flex; align-items: center; color: #44604E; font-size: 13px; border-radius: 6px; padding: 0 8px; }
+  .frame-light .row.hi { background: #B4D4BE; color: #14301E; font-weight: 600; }
+  .frame-light .main { position: absolute; left: 280px; top: 0; right: 0; bottom: 0; }
+  .frame-light .bubble { margin: 26px 40px 0; width: 480px; background: #DCEDE0; border: 1px solid #B4D4BE; border-radius: 12px; padding: 14px 16px; font-size: 14px; color: #14301E; line-height: 1.7; }
+  .frame-light .bubble.self { margin-left: 640px; background: #E0F0E5; }
+  .frame-light .emblem { position: absolute; top: 50%; right: 0; width: 200px; height: 400px; transform: translateY(-50%); overflow: hidden; opacity: 0.4; }
+  .frame-light .emblem img { width: 400px; height: 400px; display: block; max-width: none; }
+  .frame-light .motto { position: absolute; left: 140px; top: 84%; transform: translate(-50%, -50%); width: 240px; opacity: 0.6; }
+  .frame-light .motto img { width: 100%; display: block; }
+  .frame-light .ball { position: absolute; right: 30px; top: 200px; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; border: 1px solid #97C0A5; box-shadow: 0 2px 6px rgba(0,0,0,0.15); background: #E0F0E5; }
+  .frame-light .ball img { width: 98px; height: 98px; object-fit: cover; display: block; margin: -13px 0 0 -13px; }
+  /* ---- 深色模式（松针绿）---- */
+  .frame-dark { position: relative; width: 1400px; height: 660px; background: #111F18; overflow: hidden; }
+  .frame-dark .glow { position: absolute; inset: 0; background: radial-gradient(120% 100% at 68% 42%, rgba(74,222,128,0.06), transparent 60%); }
+  .frame-dark .sidebar { position: absolute; left: 0; top: 0; bottom: 0; width: 280px; background: #0C1913; border-right: 1px solid #2B4234; padding: 16px 14px; }
+  .frame-dark .logo { font-size: 15px; font-weight: 700; color: #4ADE80; padding-bottom: 14px; border-bottom: 1px solid #2B4234; }
+  .frame-dark .row { height: 34px; display: flex; align-items: center; color: #8FB3A0; font-size: 13px; border-radius: 6px; padding: 0 8px; }
+  .frame-dark .row.hi { background: #1D3027; color: #DAE4DD; font-weight: 600; }
+  .frame-dark .main { position: absolute; left: 280px; top: 0; right: 0; bottom: 0; }
+  .frame-dark .bubble { margin: 26px 40px 0; width: 480px; background: #172720; border: 1px solid #2B4234; border-radius: 12px; padding: 14px 16px; font-size: 14px; color: #DAE4DD; line-height: 1.7; }
+  .frame-dark .bubble.self { margin-left: 640px; background: #14241D; }
+  .frame-dark .emblem { position: absolute; top: 50%; right: 0; width: 200px; height: 400px; transform: translateY(-50%); overflow: hidden; opacity: 0.18; }
+  .frame-dark .emblem img { width: 400px; height: 400px; display: block; max-width: none; filter: brightness(0) invert(1); }
+  .frame-dark .motto { position: absolute; left: 140px; top: 84%; transform: translate(-50%, -50%); width: 240px; opacity: 0.55; }
+  .frame-dark .motto img { width: 100%; display: block; filter: invert(1); }
+  .frame-dark .ball { position: absolute; right: 30px; top: 200px; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; border: 1px solid #3B5746; box-shadow: 0 2px 6px rgba(0,0,0,0.5); background: #14241D; }
+  .frame-dark .ball img { width: 98px; height: 98px; object-fit: cover; display: block; margin: -13px 0 0 -13px; filter: brightness(0) invert(1); opacity: 0.7; }
+</style>
+</head>
+<body>
+  <div class="label">— 浅色模式 —</div>
+  <div class="frame-light">
+    <div class="glow"></div>
+    <div class="sidebar">
+      <div class="logo">湖北大学</div>
+      <div class="row hi">工作区 · 项目A</div>
+      <div class="row">会话 1</div>
+      <div class="row">会话 2</div>
+      <div class="row">工作区 · 项目B</div>
+      <div class="row">会话 3</div>
+    </div>
+    <div class="main">
+      <div class="bubble">你好，这是主题插件的浅色效果示例。护眼淡绿配色，右侧校徽水印，底部校训横匾。</div>
+      <div class="bubble self">悬浮球显示校标，点击可查看 DeepSeek 余额。</div>
+      <div class="emblem"><img src="../assets/校标.png" alt=""></div>
+      <div class="motto"><img src="../assets/校训-横版.png" alt=""></div>
+      <div class="ball"><img src="../assets/校标.png" alt=""></div>
+    </div>
+  </div>
+  <div class="label">— 深色模式（松针绿）—</div>
+  <div class="frame-dark">
+    <div class="glow"></div>
+    <div class="sidebar">
+      <div class="logo">湖北大学</div>
+      <div class="row hi">工作区 · 项目A</div>
+      <div class="row">会话 1</div>
+      <div class="row">会话 2</div>
+      <div class="row">工作区 · 项目B</div>
+      <div class="row">会话 3</div>
+    </div>
+    <div class="main">
+      <div class="bubble">深色模式为柔和低饱和的松针绿，校徽/校训自动转为白色剪影，正文柔和米白不刺眼。</div>
+      <div class="bubble self">悬浮球在深色下同样变为白色校徽。</div>
+      <div class="emblem"><img src="../assets/校标.png" alt=""></div>
+      <div class="motto"><img src="../assets/校训-横版.png" alt=""></div>
+      <div class="ball"><img src="../assets/校标.png" alt=""></div>
+    </div>
+  </div>
+</body>
+</html>
