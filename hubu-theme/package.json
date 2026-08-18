@@ -1,0 +1,22 @@
+{
+  "name": "hubu-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "湖北大学主题背景：护眼淡绿配色 + 校徽水印 + 校训横匾（持久化客户端插件）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}

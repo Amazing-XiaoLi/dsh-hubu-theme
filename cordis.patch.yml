@@ -1,0 +1,17 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+
+# ── 湖北大学主题背景（持久化客户端插件）──
+# 本地包 hubu-theme（profiles/node_modules/hubu-theme）随应用启动自动加载：
+# 护眼淡绿配色 + 右侧校徽水印 + 底部校训横匾（宽度随侧边栏缩放）。
+- insert:
+    - id: hubu-theme
+      name: 'hubu-theme'
+
+# ── 校标悬浮球（永久客户端插件）──
+# 本地包 hubu-floatball（profiles/node_modules/hubu-floatball）随应用启动自动加载：
+# 校标图标悬浮球，点击显示 DeepSeek 余额（宿主侧 /hubu/balance 路由，1 秒限频）。
+- insert:
+    - id: hubu-floatball
+      name: 'hubu-floatball'

@@ -1,0 +1,15 @@
+# 本地环境文件，勿提交
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# DSH 本地配置（绝不提交）
+.dsh/
+sessions/
+storages/
+profiles/
+
+# 个人备份/临时文件
+manifest.sha256.txt
+*~ 
